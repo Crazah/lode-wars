@@ -15,16 +15,21 @@
 // BEGIN_INCLUDE
 #include "assets\code\_define.dm"
 #include "assets\code\world.dm"
+#include "assets\code\game\handlers\mining\mining.dm"
+#include "assets\code\game\handlers\mining\ores.dm"
 #include "assets\code\game\movables\movables.dm"
 #include "assets\code\game\movables\shadows.dm"
 #include "assets\code\game\movables\mobs\mobs.dm"
 #include "assets\code\game\movables\objects\objects.dm"
 #include "assets\code\game\movables\objects\rocks.dm"
+#include "assets\code\game\movables\objects\items\items.dm"
+#include "assets\code\game\movables\objects\items\ores\ores.dm"
 #include "assets\code\game\turfs\flooring.dm"
 #include "assets\code\game\turfs\turfs.dm"
 #include "assets\code\game\ui\ui_core.dm"
 #include "assets\code\helpers\global.dm"
 #include "assets\code\helpers\map_init.dm"
 #include "assets\levels\world.dmm"
+#include "assets\ui\interface.dmf"
 // END_INCLUDE
 
