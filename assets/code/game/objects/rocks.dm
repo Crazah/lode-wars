@@ -11,8 +11,7 @@ obj/outdoors/rocks
 			var/list/turf/adjacentTiles[4]
 			for(var/direction in list(1,2,4,8))
 				for(var/obj/outdoors/rocks/wall in GetStep(src,direction))
-					if(wall != src)
-						adjacentTiles[num2dir(direction)] = wall
+					if(wall != src) adjacentTiles[num2dir(direction)] = wall
 
 			var/hasTop = adjacentTiles["NORTH"]
 			var/hasBottom = adjacentTiles["SOUTH"]
