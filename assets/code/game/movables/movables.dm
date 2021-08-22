@@ -5,5 +5,6 @@ atom/movable
 	step_size = 8
 	var/
 		shadow/shadow
+		hasShadow = true
 		shadowOffsetY = 0
 		shadowOffsetX = 0

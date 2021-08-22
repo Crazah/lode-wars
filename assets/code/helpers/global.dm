@@ -11,7 +11,7 @@ proc/
 				if(EAST) xaa += 1
 				if(WEST) xaa -= 1
 			var/turf/t = locate(xaa,yaa,ref.z)
-			tileList.Add(t.contents, t)
+			if(t && istype(t)) tileList.Add(t.contents, t)
 		return tileList
 
 	num2dir(num)
