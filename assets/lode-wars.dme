@@ -14,5 +14,8 @@
 
 // BEGIN_INCLUDE
 #include "code\world.dm"
+#include "code\game\objects\objects.dm"
+#include "code\game\turfs\turfs.dm"
+#include "code\game\ui\ui_core.dm"
 // END_INCLUDE
 
