@@ -3,14 +3,19 @@ obj/outdoors/rocks
 		icon_state = "15"
 		density = 1
 
+		MapInit()
+			..()
+			UpdateTile()
 		/*
 			Autotiling for walls
+			exlude - any wall to exclude from this calculation
 		*/
-		MapInit()
+		proc/UpdateTile(exclude)
 
 			var/list/turf/adjacentTiles[4]
 			for(var/direction in list(1,2,4,8))
 				for(var/obj/outdoors/rocks/wall in GetStep(src,direction))
+					if(wall == exclude) continue
 					if(wall != src) adjacentTiles[num2dir(direction)] = wall
 
 			var/hasTop = adjacentTiles["NORTH"]
@@ -37,5 +42,5 @@ obj/outdoors/rocks
 			if(!hasTop && hasBottom && hasLeft && hasRight) icon_state = "14"
 
 			//looks better to have lone rocks be see through, not as choppy
-			if(icon_state != "0") opacity = 1
+		//	if(icon_state != "0") opacity = 1
 			..()
