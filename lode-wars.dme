@@ -1,0 +1,30 @@
+// DM Environment file for code.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "assets\code\_define.dm"
+#include "assets\code\world.dm"
+#include "assets\code\game\movables\movables.dm"
+#include "assets\code\game\movables\shadows.dm"
+#include "assets\code\game\movables\mobs\mobs.dm"
+#include "assets\code\game\movables\objects\objects.dm"
+#include "assets\code\game\movables\objects\rocks.dm"
+#include "assets\code\game\turfs\flooring.dm"
+#include "assets\code\game\turfs\turfs.dm"
+#include "assets\code\game\ui\ui_core.dm"
+#include "assets\code\helpers\global.dm"
+#include "assets\code\helpers\map_init.dm"
+#include "assets\levels\world.dmm"
+// END_INCLUDE
+

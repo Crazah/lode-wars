@@ -6,7 +6,7 @@ obj/outdoors/rocks
 		/*
 			Autotiling for walls
 		*/
-		proc/Tile()
+		MapInit()
 
 			var/list/turf/adjacentTiles[4]
 			for(var/direction in list(1,2,4,8))
@@ -38,7 +38,4 @@ obj/outdoors/rocks
 
 			//looks better to have lone rocks be see through, not as choppy
 			if(icon_state != "0") opacity = 1
-
-		New()
 			..()
-			spawn() Tile()
