@@ -44,7 +44,7 @@ obj/outdoors/rocks
 
 			UpdateSurroundingTiles(turf/tile)
 				for(var/obj/outdoors/rocks/wall/wall in range(1,tile))
-					wall.UpdateTile(src)
+					wall.icon_state = wall.GetTileState(src)
 
 			SetHealth(newHealth, mob/miner)
 				health = newHealth

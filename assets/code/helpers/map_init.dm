@@ -6,6 +6,7 @@
 world
 	New()
 		..()
+		Generate()
 		MapInitialized()
 var
 	list/InitList = list()

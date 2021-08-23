@@ -8,5 +8,5 @@ world
 	turf = /turf/outdoors/flooring/ground
 	view = 6		// show up to 6 tiles outward from center (13x13 view)
 	New()
-		..()
 		world.log = file("debug.txt")
+		..()

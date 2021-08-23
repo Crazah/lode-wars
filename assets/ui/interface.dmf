@@ -50,20 +50,29 @@ window "default"
 		menu = "menu"
 		outer-size = 1040x846
 		inner-size = 1024x787
+	elem "output1"
+		type = OUTPUT
+		pos = 784,397
+		size = 235x368
+		anchor1 = 77,52
+		anchor2 = 100,100
+		is-default = true
+		border = sunken
+		saved-params = "max-lines"
 	elem "map1"
 		type = MAP
 		pos = 0,0
-		size = 1024x768
+		size = 779x768
 		anchor1 = 0,0
-		anchor2 = 100,100
+		anchor2 = 76,100
 		saved-params = "zoom;letterbox;zoom-mode"
 		letterbox = false
 	elem "info1"
 		type = INFO
-		pos = 782,20
-		size = 200x200
-		anchor1 = -1,-1
-		anchor2 = -1,-1
+		pos = 782,3
+		size = 238x389
+		anchor1 = 76,0
+		anchor2 = 100,51
 		is-default = true
 		saved-params = ""
 		tab-background-color = none
