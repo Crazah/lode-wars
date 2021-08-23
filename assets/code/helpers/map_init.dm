@@ -2,7 +2,6 @@
  Snippet by Ter13, link: http://www.byond.com/forum/post/2080183
 */
 
-
 world
 	New()
 		..()

@@ -10,3 +10,4 @@ world
 	New()
 		world.log = file("debug.txt")
 		..()
+		loop()

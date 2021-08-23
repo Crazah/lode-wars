@@ -27,7 +27,7 @@ atom/movable/
 			shadow.color = "black"
 			shadow.plane = SHADOWS_PLANE
 			shadow.layer = FLOAT_LAYER-1
-
+			shadow.mouse_opacity = 0
 			shadow.appearance_flags = PIXEL_SCALE | KEEP_TOGETHER | RESET_COLOR | TILE_BOUND
 			shadow.vis_flags = VIS_UNDERLAY | VIS_INHERIT_ICON_STATE | VIS_INHERIT_ID | VIS_INHERIT_DIR | VIS_INHERIT_LAYER
 
