@@ -1,31 +1,52 @@
 macro "macro"
 	elem 
-		name = "North+REP"
-		command = ".north"
+		name = "West"
+		command = "MoveKey 8 1"
 	elem 
-		name = "South+REP"
-		command = ".south"
+		name = "West+UP"
+		command = "MoveKey 8 0"
 	elem 
-		name = "East+REP"
-		command = ".east"
+		name = "North"
+		command = "MoveKey 1 1"
 	elem 
-		name = "West+REP"
-		command = ".west"
+		name = "North+UP"
+		command = "MoveKey 1 0"
 	elem 
-		name = "Northeast+REP"
-		command = ".northeast"
+		name = "East"
+		command = "MoveKey 4 1"
 	elem 
-		name = "Northwest+REP"
-		command = ".northwest"
+		name = "East+UP"
+		command = "MoveKey 4 0"
 	elem 
-		name = "Southeast+REP"
-		command = ".southeast"
+		name = "South"
+		command = "MoveKey 2 1"
 	elem 
-		name = "Southwest+REP"
-		command = ".southwest"
+		name = "South+UP"
+		command = "MoveKey 2 0"
 	elem 
-		name = "Center+REP"
-		command = ".center"
+		name = "A"
+		command = "MoveKey 8 1"
+	elem 
+		name = "A+UP"
+		command = "MoveKey 8 0"
+	elem 
+		name = "D"
+		command = "MoveKey 4 1"
+	elem 
+		name = "D+UP"
+		command = "MoveKey 4 0"
+	elem 
+		name = "S"
+		command = "MoveKey 2 1"
+	elem 
+		name = "S+UP"
+		command = "MoveKey 2 0"
+	elem 
+		name = "W"
+		command = "MoveKey 1 1"
+	elem 
+		name = "W+UP"
+		command = "MoveKey 1 0"
 
 
 menu "menu"

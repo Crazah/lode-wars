@@ -4,6 +4,9 @@ mob
 	var/
 		isMining = false
 		maxWeight = 30
+		isSwimming = false
+		list/keyDown = list()
+		movingDir = null
 	proc/
 		CanHoldItem(obj/items/item)
 			if(GetCurrentWeight() + item.weight > maxWeight) return false
