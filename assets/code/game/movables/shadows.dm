@@ -8,10 +8,6 @@ shadow
 	density = 0
 	color = "black"
 
-mob/Login()
-	loc = locate(1,1,1)
-	GenerateShadow()
-
 atom/movable/
 	MapInit()
 		..()
