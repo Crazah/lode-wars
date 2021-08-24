@@ -7,6 +7,8 @@ mob
 		isSwimming = false
 		list/keyDown = list()
 		movingDir = null
+		obj/light/light
+		image/see_dark_light/darklight
 	proc/
 		CanHoldItem(obj/items/item)
 			if(GetCurrentWeight() + item.weight > maxWeight) return false
@@ -20,4 +22,4 @@ mob
 
 	//TODO: replace with HUD
 	Stat()
-		statpanel("inventory",src.contents)
+		statpanel("Backpack",src.contents)

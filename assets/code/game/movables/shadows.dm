@@ -1,7 +1,7 @@
 shadow
 	parent_type = /obj
-	appearance_flags = PIXEL_SCALE | KEEP_APART | RESET_COLOR
-	vis_flags = VIS_UNDERLAY | VIS_INHERIT_ICON_STATE | VIS_INHERIT_ID
+	appearance_flags = PIXEL_SCALE | KEEP_TOGETHER | RESET_COLOR | TILE_BOUND | RESET_TRANSFORM
+	vis_flags = VIS_UNDERLAY | VIS_INHERIT_ICON_STATE | VIS_INHERIT_ID | VIS_INHERIT_DIR | VIS_INHERIT_LAYER
 	plane = SHADOWS_PLANE
 	hasShadow = false
 	mouse_opacity = 0
@@ -22,14 +22,13 @@ atom/movable/
 			shadow.appearance = src.appearance
 			shadow.alpha = 50
 			shadow.icon = I
-			shadow.maptext = null
-			shadow.render_source = null
-			shadow.color = "black"
-			shadow.plane = SHADOWS_PLANE
-			shadow.layer = FLOAT_LAYER-1
-			shadow.mouse_opacity = 0
-			shadow.appearance_flags = PIXEL_SCALE | KEEP_TOGETHER | RESET_COLOR | TILE_BOUND
-			shadow.vis_flags = VIS_UNDERLAY | VIS_INHERIT_ICON_STATE | VIS_INHERIT_ID | VIS_INHERIT_DIR | VIS_INHERIT_LAYER
+			shadow.maptext = initial(shadow.maptext)
+			shadow.render_source = initial(shadow.render_source)
+			shadow.color = initial(shadow.color)
+			shadow.layer = FLOAT_LAYER-2
+			shadow.mouse_opacity = initial(shadow.mouse_opacity)
+			shadow.appearance_flags = initial(shadow.appearance_flags)
+			shadow.vis_flags = initial(shadow.vis_flags)
 
 			if(!shadowOffsetY) shadowOffsetY = initial(shadowOffsetY) + initial(pixel_y)
 			if(!shadowOffsetX) shadowOffsetX = initial(shadowOffsetX) + initial(pixel_y)

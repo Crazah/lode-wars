@@ -1,4 +1,4 @@
 turf/outdoors/flooring
-	plane = GROUND_PLANE
+	plane = FLOOR_PLANE
 	ground
 

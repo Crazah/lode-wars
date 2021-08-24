@@ -1,5 +1,7 @@
 ore
 	parent_type = /obj
+	appearance_flags = PIXEL_SCALE
+	hasShadow = false
 	var/
 		value
 		amount
@@ -20,11 +22,15 @@ ore
 				if(MEDIUM_AMOUNT) return "medium"
 				if(RICH_AMOUNT) return "rich"
 
+		EffectAnimation()
+			..()
+
 
 	New(amount)
 		src.amount = amount
 		icon_state = GetIconState()
 		..()
+		EffectAnimation()
 
 	asbylite
 		icon = 'assets/art/turfs/ore_asbylite.dmi'
@@ -46,6 +52,13 @@ ore
 		icon = 'assets/art/turfs/ore_kaburite.dmi'
 		value = 5
 		itemPath = /obj/items/ores/kaburite
+
+		//ahhh radioactive!
+		EffectAnimation()
+			..()
+			filters = list(filter(type="bloom",threshold=rgb(254,254,254),size = 2, offset = 1))
+			animate(filters[1],size = 3, offset = 2,time = 10, loop = -1)
+			animate(size = 2, offset = 1,time = 10)
 	necite
 		icon = 'assets/art/turfs/ore_necite.dmi'
 		value = 6

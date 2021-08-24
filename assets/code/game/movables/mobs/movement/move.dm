@@ -13,3 +13,9 @@ mob
 	proc/MoveDirection(dir)
 		if(!playersToUpdate[src]) playersToUpdate[src] = null
 		src.movingDir = dir
+
+	Move(atom/newLoc)
+		if(nextMove > world.time) return 0
+		glide_size = TILE_WIDTH / max(moveDelay,TICK_LAG) * TICK_LAG
+		. = ..()
+		if(.) nextMove = world.time + moveDelay
