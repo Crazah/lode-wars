@@ -1,7 +1,6 @@
 ore
 	parent_type = /obj
 	appearance_flags = PIXEL_SCALE
-	hasShadow = false
 	var/
 		value
 		amount

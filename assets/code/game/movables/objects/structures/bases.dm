@@ -3,7 +3,6 @@ obj/outdoors/structures/bases
 
 	respawner
 		icon_state = "respawn"
-		hasShadow = false
 		filters = list(filter(type="drop_shadow",size=4,color="#ADD8E6"))
 		MapInit()
 			..()
@@ -15,10 +14,12 @@ obj/outdoors/structures/bases
 		icon_state = "wall"
 		density = 1
 		plane = WALL_PLANE
+		hasShadow = true
 		filters = list(filter(type="drop_shadow",x=0,y=-2,size=4,color="#04080FAA"))
 
 	lamp
 		icon_state = "lamp"
+		hasShadow = true
 		filters = list(filter(type="bloom",threshold=rgb(254,254,254),size=2,offset=1))
 		MapInit()
 			..()

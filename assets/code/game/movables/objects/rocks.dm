@@ -3,6 +3,7 @@ obj/outdoors/rocks
 		plane = WALL_PLANE
 		icon_state = "15"
 		density = 1
+		hasShadow = true
 		autoTileTypes = list(/obj/outdoors/rocks/wall,/obj/outdoors/structures/bases/wall)
 
 		MapInit()

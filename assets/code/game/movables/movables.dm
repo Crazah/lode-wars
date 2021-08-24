@@ -3,10 +3,10 @@ atom/movable
 	appearance_flags = LONG_GLIDE | TILE_MOVER
 	var/
 		shadow/shadow
-		hasShadow = true
 		shadowOffsetY = 0
 		shadowOffsetX = 0
 		moveDelay = 2
+		hasShadow = false
 		tmp
 			nextMove = 0
 

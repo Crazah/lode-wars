@@ -50,7 +50,8 @@
 
 #define FULLSCREEN_PLANE 200
 
-#define GROUPED_PLANE 999
+#define UI_BACKDROP_PLANE 300
+#define UI_FOREGROUND_PLANE 310
 
 //lighting colors
 #define LIGHTING_BLUE           rgb(0,0,155)

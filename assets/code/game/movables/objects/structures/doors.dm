@@ -23,3 +23,4 @@ obj/outdoors/structures/bases/doors
 
 	door
 		icon_state = "door"
+		hasShadow = true

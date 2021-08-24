@@ -20,6 +20,7 @@ mob/proc/
 		new/obj/screen_objects/plane_master/floor_plane(client)
 		new/obj/screen_objects/plane_master/movable_plane(client)
 		new/obj/screen_objects/plane_master/lighting_plane(client)
+		new/obj/screen_objects/plane_master/ui_plane(client)
 
 	AddSeeInDarkLight()
 		if(!darklight)

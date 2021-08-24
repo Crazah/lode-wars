@@ -1,6 +1,7 @@
 mob
 	icon = 'assets/art/mobs/jezzer.dmi'
 	shadowOffsetY = 19
+	hasShadow = true
 	var/
 		isMining = false
 		maxWeight = 30

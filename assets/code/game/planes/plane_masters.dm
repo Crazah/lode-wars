@@ -1,7 +1,6 @@
 
 
 obj/screen_objects/
-	hasShadow = false
 	blend_mode = BLEND_OVERLAY
 	backdrop
 		icon = 'assets/art/effects/screen.dmi'
@@ -20,25 +19,21 @@ obj/screen_objects/
 
 	plane_master
 		screen_loc = "CENTER"
-		appearance_flags = PLANE_MASTER | NO_CLIENT_COLOR
+		appearance_flags = PLANE_MASTER | NO_CLIENT_COLOR | PIXEL_SCALE
 		mouse_opacity = false
 		blend_mode = BLEND_OVERLAY
 		floor_plane
 			plane = FLOOR_PLANE
-			render_target = "floor_plane"
 
 		wall_plane
 			plane = WALL_PLANE
-			render_target = "wall_plane"
 			filters=list(filter(type="drop_shadow",x = 0, y = -6, size = 6, color = "#04080FAA"))
 
 		movable_plane
 			plane = MOVABLE_PLANE
-			render_target = "movable_plane"
 
 		lighting_plane
 			plane = LIGHTING_PLANE
-			render_target = "lights"
 			color = list(null, null, null, "#0000", "#000f")
 			blend_mode = BLEND_MULTIPLY
 			Backdrop(client/C)
@@ -46,6 +41,16 @@ obj/screen_objects/
 				overlays += new/obj/screen_objects/backdrop/lighting_backdrop/lit
 				overlays += new/obj/screen_objects/backdrop/lighting_backdrop/unlit
 				UpdateView(C)
+
+
+		ui_plane
+			plane = UI_BACKDROP_PLANE
+			New()
+				..()
+				transform = matrix(1.31,0,83,0,0.98,2)
+
+		ui_foreground_plane
+			plane = UI_FOREGROUND_PLANE
 
 		New(client/C)
 			C.screen += src

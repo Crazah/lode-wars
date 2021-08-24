@@ -1,5 +1,8 @@
 macro "macro"
 	elem 
+		name = "Return"
+		command = "Say"
+	elem 
 		name = "West"
 		command = "MoveKey 8 1"
 	elem 
@@ -67,34 +70,18 @@ window "default"
 		background-color = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Lode Wars"
+		statusbar = false
 		macro = "macro"
-		menu = "menu"
-		outer-size = 1040x846
-		inner-size = 1024x787
-	elem "output1"
-		type = OUTPUT
-		pos = 784,397
-		size = 235x368
-		anchor1 = 77,52
-		anchor2 = 100,100
-		is-default = true
-		border = sunken
-		saved-params = "max-lines"
+		outer-size = 1040x807
+		inner-size = 1024x768
 	elem "map1"
 		type = MAP
 		pos = 0,0
-		size = 779x768
+		size = 1024x768
 		anchor1 = 0,0
-		anchor2 = 76,100
+		anchor2 = 100,100
 		saved-params = "zoom;letterbox;zoom-mode"
 		letterbox = false
-	elem "info1"
-		type = INFO
-		pos = 782,3
-		size = 238x389
-		anchor1 = 76,0
-		anchor2 = 100,51
-		is-default = true
-		saved-params = ""
-		tab-background-color = none
+		style = ".chat{color:#ddd;vertical-align:bottom;}"
 

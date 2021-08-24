@@ -20,3 +20,17 @@ proc/
 			if(2) return "SOUTH"
 			if(8) return "WEST"
 			if(4) return "EAST"
+
+	ListToString(list/strings = list(), delimiter, breakAfter)
+		var returnString = ""
+		var/newLineAfter = breakAfter
+		for(var/i in strings)
+			if(i != strings[strings.len])
+				if(i == strings[newLineAfter])
+					returnString = "[returnString][i][delimiter]<br>"
+					newLineAfter = newLineAfter + breakAfter
+				else
+					returnString = "[returnString][i][delimiter]"
+			else
+				returnString = "[returnString][i]"
+		return returnString

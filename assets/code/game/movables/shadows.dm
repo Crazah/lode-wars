@@ -3,7 +3,6 @@ shadow
 	appearance_flags = PIXEL_SCALE | KEEP_TOGETHER | RESET_COLOR | TILE_BOUND | RESET_TRANSFORM
 	vis_flags = VIS_UNDERLAY | VIS_INHERIT_ICON_STATE | VIS_INHERIT_ID | VIS_INHERIT_DIR | VIS_INHERIT_LAYER
 	plane = SHADOWS_PLANE
-	hasShadow = false
 	mouse_opacity = 0
 	density = 0
 	color = "black"
