@@ -2,11 +2,13 @@ turf/outdoors/dense/
 	water
 		icon = 'assets/art/turfs/water.dmi'
 		PostInit = 1
+		autoTileTypes = list(/turf/outdoors/dense/water)
 		var/
 			isDeepWater = false
 
 		MapInit()
 			InitWater()
+			new/obj/lights/ambient_light(src)
 
 
 		// this is a very rough implementation of swimming, mostly just PoC

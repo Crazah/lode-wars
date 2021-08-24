@@ -1,8 +1,9 @@
 obj/outdoors/rocks
 	wall
 		var/
-			health = 5
+			health = 1
 			ore/ore
+			initialColor
 
 		Cross(atom/movable/bumper)
 			if(ismob(bumper))
@@ -16,7 +17,7 @@ obj/outdoors/rocks
 		proc/
 			AddOre()
 				ore = GetOre()
-				overlays += ore
+				vis_contents += ore
 
 			GetOre()
 				var/oreType = pick(ASBYLITE_PROB;/ore/asbylite, DRAXILITE_PROB;/ore/draxilite, GREZLORITE_PROB;/ore/grezlorite,\
@@ -29,14 +30,16 @@ obj/outdoors/rocks
 				set waitfor = 0
 				if(player.isMining) return
 				player.isMining = true
+				flick("action", player)
 				MiningAnimation()
 				SetHealth(health - damage, player)
 				sleep(5)
 				player.isMining = false
 
 			MiningAnimation()
-				animate(src, transform = matrix(1.1,0,-0.5,0,1,0), color = "#ddd", time = 2)
-				animate(transform = matrix(), color = null, time = 2)
+
+				animate(src, transform = matrix(1.1,0,-0.5,0,1,0), color = gradient(initialColor, "#ddd", 0.2), time = 2)
+				animate(transform = matrix(), color = initialColor, time = 2)
 
 			CrumbleAnimation()
 				flick("crumble",src)

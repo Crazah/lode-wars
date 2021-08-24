@@ -1,7 +1,9 @@
 /mob/Login()
 	GenerateShadow()
-	loc = FindBlankTile()
+	loc = FindSpawner()
+	InitPlanes()
+	AddSeeInDarkLight()
 
-mob/proc/FindBlankTile()
+mob/proc/FindSpawner()
 	for(var/obj/outdoors/structures/bases/respawner/tile in world)
 		return tile.loc

@@ -14,8 +14,11 @@
 
 // BEGIN_INCLUDE
 #include "assets\code\_define.dm"
+#include "assets\code\client.dm"
+#include "assets\code\game\atoms\atom.dm"
 #include "assets\code\game\atoms\tiling.dm"
 #include "assets\code\game\client\client.dm"
+#include "assets\code\game\client\effects.dm"
 #include "assets\code\game\handlers\map_generation\generate_level.dm"
 #include "assets\code\game\handlers\map_generation\noise_simplex.dm"
 #include "assets\code\game\handlers\mining\mining.dm"
@@ -30,7 +33,11 @@
 #include "assets\code\game\movables\objects\rocks.dm"
 #include "assets\code\game\movables\objects\items\items.dm"
 #include "assets\code\game\movables\objects\items\ores\ores.dm"
+#include "assets\code\game\movables\objects\lights\lights.dm"
 #include "assets\code\game\movables\objects\structures\bases.dm"
+#include "assets\code\game\movables\objects\structures\doors.dm"
+#include "assets\code\game\planes\lighting.dm"
+#include "assets\code\game\planes\plane_masters.dm"
 #include "assets\code\game\turfs\flooring.dm"
 #include "assets\code\game\turfs\turfs.dm"
 #include "assets\code\game\turfs\dense\water.dm"
