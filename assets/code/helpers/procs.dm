@@ -1,9 +1,8 @@
 proc/
 	GetStep(atom/ref,dir,dist=1)
-		var/
-			list/tileList = list()
-			xaa = ref.x
-			yaa = ref.y
+		var/list/tileList = list()
+		var/xaa = ref.x
+		var/yaa = ref.y
 		while(dist--)
 			switch(dir)
 				if(NORTH) yaa += 1

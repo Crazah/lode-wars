@@ -27,7 +27,9 @@ obj/screen_objects/
 
 		wall_plane
 			plane = WALL_PLANE
+			#ifndef SPACEMAN_DMM
 			filters=list(filter(type="drop_shadow",x = 0, y = -6, size = 6, color = "#04080FAA"))
+			#endif
 
 		movable_plane
 			plane = MOVABLE_PLANE

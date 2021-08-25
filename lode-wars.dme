@@ -13,8 +13,9 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "assets\code\_define.dm"
 #include "assets\code\client.dm"
+#include "assets\code\_defines\_define.dm"
+#include "assets\code\_defines\versioning.dm"
 #include "assets\code\game\atoms\atom.dm"
 #include "assets\code\game\atoms\tiling.dm"
 #include "assets\code\game\client\client.dm"
@@ -51,6 +52,8 @@
 #include "assets\code\global\world.dm"
 #include "assets\code\helpers\map_init.dm"
 #include "assets\code\helpers\procs.dm"
+#include "assets\code\helpers\profiling.dm"
+#include "assets\code\helpers\Spaceman DMM debugging.dm"
 #include "assets\levels\world.dmm"
 #include "assets\ui\interface.dmf"
 // END_INCLUDE
