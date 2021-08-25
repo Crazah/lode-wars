@@ -9,9 +9,9 @@ world
 		Profile(PROFILE_START, "json")
 	
 	Del()
-		fdel("Data/profile.txt")
-		fdel("Data/profile_average.txt")
-		text2file(Profile(PROFILE_REFRESH, "json"), "Data/profile.txt")
-		text2file(Profile(PROFILE_REFRESH | PROFILE_AVERAGE, "json"), "Data/profile_average.txt")
+		fdel("DEBUG/profile.json")
+		fdel("DEBUG/profile_average.json")
+		text2file(Profile(PROFILE_REFRESH, "json"), "DEBUG/profile.json")
+		text2file(Profile(PROFILE_REFRESH | PROFILE_AVERAGE, "json"), "DEBUG/profile_average.json")
 		..()
 #endif
