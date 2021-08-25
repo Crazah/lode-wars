@@ -9,8 +9,11 @@ proc/Generate(OpenSimplex2F/noise = new(0), offset_x = 0, offset_y = 0)
 	var/borders[] = block(locate(1,1,1), locate(world.maxx, world.maxy, world.maxz))
 	borders -= block(locate(3, 1, 1), locate(world.maxx - 2, world.maxy - 2, world.maxz))
 	for(var/turf/turf in borders)
-		if(world.tick_usage > 50) continue
+		if(world.tick_usage > 90)
+			sleep(world.tick_lag)
+
 		new /turf/edge_border(turf)
+
 	borders = null
 
 	// Generate designated areas

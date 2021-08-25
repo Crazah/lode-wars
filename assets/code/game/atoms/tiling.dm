@@ -3,6 +3,9 @@ atom/
 		list/autoTileTypes
 	proc/
 		GetTileState(exclude)
+					
+			while(world.tick_usage > 90)
+				sleep(world.tick_lag)
 
 			var/list/turf/adjacentTiles[4]
 			for(var/direction in list(1,2,4,8))

@@ -5,8 +5,8 @@
 #ifdef DEBUG
 world
 	New()
-		..()
 		Profile(PROFILE_START, "json")
+		..()
 	
 	Del()
 		fdel("DEBUG/profile.json")
