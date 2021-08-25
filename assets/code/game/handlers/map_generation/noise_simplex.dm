@@ -144,8 +144,8 @@ OpenSimplex2F
 			GRADIENTS_2D[i + 1] = grad2[i % grad2.len + 1]
 
 LatticePoint2D
-	var/xsv, ysv
-	var/dx, dy
+	var/xsv; var/ysv
+	var/dx; var/dy
 
 	New(xsv, ysv)
 		src.xsv = xsv
@@ -155,7 +155,7 @@ LatticePoint2D
 		dy = -ysv - ssv
 
 Grad2
-	var/dx, dy
+	var/dx; var/dy
 
 	New(dx, dy)
 		src.dx = dx

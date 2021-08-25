@@ -9,3 +9,4 @@ proc/loop()
 			world.log << "[e] on [e.file]:[e.line]"
 			continue
 		sleep(world.tick_lag)
+		

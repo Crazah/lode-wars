@@ -3,4 +3,5 @@
 *.int
 *.lk
 *.zip
-debug.txt
+.vscode/
+DEBUG/

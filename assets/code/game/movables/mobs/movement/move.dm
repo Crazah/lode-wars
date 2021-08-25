@@ -1,6 +1,7 @@
 mob/verb/
 	MoveKey(dir as num,state as num)
-		set instant = 1, hidden = 1
+		set instant = 1
+		set hidden = 1
 		if(state)
 			if(!keyDown["[dir]"]) keyDown["[dir]"] = dir
 			MoveDirection(dir)

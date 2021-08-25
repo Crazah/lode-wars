@@ -5,4 +5,3 @@ proc/MoveMobs()
 		else
 			step(m, m.movingDir)
 			if(!m.client) playersToUpdate -= m
-
