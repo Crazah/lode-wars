@@ -4,6 +4,7 @@ proc/loop()
 	while(world)
 		try
 			ticker++
+			if(!ticker % 600) SetRoundTimer(roundTimer-1)
 			if(playersToUpdate?.len) MoveMobs()
 		catch(var/exception/e)
 			world.log << "[e] on [e.file]:[e.line]"

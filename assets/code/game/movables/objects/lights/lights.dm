@@ -25,6 +25,9 @@ obj/lights/
 	white_light
 		lightType = /light/white_light/
 
+	mining_light
+		lightType = /light/mining_light/
+
 	respawner_light
 		lightType = /light/respawner_light
 
@@ -66,6 +69,11 @@ light
 
 	white_light
 		size = 3.6
+		color = "#666f"
+		alpha = 255
+
+	mining_light
+		size = 8
 		color = "#666f"
 		alpha = 255
 

@@ -2,10 +2,11 @@
 
 ui/chat
 	screen_loc = "CENTER"
-	screenX = -50
+	screenX = 25
 	screenY = -130
 	maptext_width = 170
 	maptext_height = 150
+	plane = UI_FOREGROUND_PLANE
 	filters = list(filter(type="outline",size=1,color="#1a1a1e"),filter(type="drop_shadow",x=0,y=-1,size=0,color="#1a1a1e"))
 	var/
 		start = "<span class='chat'>"

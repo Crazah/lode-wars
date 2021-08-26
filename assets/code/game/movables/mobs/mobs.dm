@@ -1,25 +1,11 @@
-mob
-	icon = 'assets/art/mobs/jezzer.dmi'
+mob/
 	shadowOffsetY = 19
 	hasShadow = true
 	var/
-		isMining = false
-		maxWeight = 30
-		isSwimming = false
 		list/keyDown = list()
-		movingDir = null
 		obj/light/light
 		image/see_dark_light/darklight
-	proc/
-		CanHoldItem(obj/items/item)
-			if(GetCurrentWeight() + item.weight > maxWeight) return false
-			return true
-
-		GetCurrentWeight()
-			var/weight = 0
-			for(var/obj/items/item in contents)
-				weight += item.weight
-			return weight
+		movingDir = null
 
 	//TODO: replace with HUD
 	Stat()

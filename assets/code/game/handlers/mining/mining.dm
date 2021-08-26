@@ -1,12 +1,12 @@
 obj/outdoors/rocks
 	wall
 		var/
-			health = 1
+			durability = 1
 			ore/ore
 			initialColor
 
 		Cross(atom/movable/bumper)
-			if(ismob(bumper))
+			if(istype(bumper,/mob/alien/))
 				. = ..()
 				if(!.) Mine(bumper, 1)
 			else ..()
@@ -17,7 +17,13 @@ obj/outdoors/rocks
 		proc/
 			AddOre()
 				ore = GetOre()
+
+			HideOre()
+				vis_contents -= ore
+
+			ShowOre()
 				vis_contents += ore
+
 
 			GetOre()
 				var/oreType = pick(ASBYLITE_PROB;/ore/asbylite, DRAXILITE_PROB;/ore/draxilite, GREZLORITE_PROB;/ore/grezlorite,\
@@ -26,19 +32,21 @@ obj/outdoors/rocks
 				var/amount = pick(POOR_PROB;POOR_AMOUNT, MEDIUM_PROB;MEDIUM_AMOUNT, RICH_PROB;RICH_AMOUNT)
 				return new oreType (amount)
 
-			Mine(mob/player, damage)
+			Mine(mob/alien/player, damage)
 				set waitfor = 0
 				if(player.isMining) return
+				sleep(1)
 				player.isMining = true
-				flick("action", player)
+				player.icon_state = "action"
 				MiningAnimation()
-				SetHealth(health - damage, player)
-				sleep(5)
+				sleep((50 - player.digging) * durability)
+				player.icon_state = ""
+				Destroy(player)
 				player.isMining = false
 
 			MiningAnimation()
 
-				animate(src, transform = matrix(1.1,0,-0.5,0,1,0), color = gradient(initialColor, "#ddd", 0.2), time = 2)
+				animate(src, transform = matrix(1.1,0,-0.5,0,1,0), color = gradient(initialColor, "#ddd", 0.2), time = 2, loop = -1)
 				animate(transform = matrix(), color = initialColor, time = 2)
 
 			CrumbleAnimation()
@@ -47,15 +55,10 @@ obj/outdoors/rocks
 
 			UpdateSurroundingTiles(turf/tile)
 				for(var/obj/outdoors/rocks/wall/wall in range(1,tile))
-					wall.icon_state = wall.GetTileState(src)
+					wall.UpdateState(src)
 
-			SetHealth(newHealth, mob/miner)
-				health = newHealth
-				CheckHealth(miner)
-
-			CheckHealth(mob/miner)
-				if(health <= 0)
-					CrumbleAnimation()
-					if(ore) ore.RetrieveOre(miner)
-					UpdateSurroundingTiles(src.loc)
-					src.loc = null
+			Destroy(mob/miner)
+				CrumbleAnimation()
+				if(ore) ore.RetrieveOre(src.loc)
+				UpdateSurroundingTiles(src.loc)
+				src.loc = null

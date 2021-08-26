@@ -19,7 +19,7 @@
 #define DRAXILITE_PROB 7
 #define NECITE_PROB 4
 #define KABURITE_PROB 1
-#define EMPTY_PROB 600
+#define EMPTY_PROB 2500
 
 // additive probabilities
 #define POOR_PROB 70
