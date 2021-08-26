@@ -5,7 +5,6 @@ atom/movable
 		shadow/shadow
 		shadowOffsetY = 0
 		shadowOffsetX = 0
-		moveDelay = 2
 		hasShadow = false
 		tmp
 			nextMove = 0

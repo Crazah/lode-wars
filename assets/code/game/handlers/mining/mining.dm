@@ -1,7 +1,7 @@
 obj/outdoors/rocks
 	wall
 		var/
-			health = 1
+			durability = 1
 			ore/ore
 			initialColor
 
@@ -38,9 +38,9 @@ obj/outdoors/rocks
 				player.isMining = true
 				player.icon_state = "action"
 				MiningAnimation()
-				sleep(50 - player.digging)
+				sleep((50 - player.digging) * durability)
 				player.icon_state = ""
-				SetHealth(health - damage, player)
+				Destroy(player)
 				player.isMining = false
 
 			MiningAnimation()
@@ -56,13 +56,8 @@ obj/outdoors/rocks
 				for(var/obj/outdoors/rocks/wall/wall in range(1,tile))
 					wall.UpdateState(src)
 
-			SetHealth(newHealth, mob/miner)
-				health = newHealth
-				CheckHealth(miner)
-
-			CheckHealth(mob/miner)
-				if(health <= 0)
-					CrumbleAnimation()
-					if(ore) ore.RetrieveOre(src.loc)
-					UpdateSurroundingTiles(src.loc)
-					src.loc = null
+			Destroy(mob/miner)
+				CrumbleAnimation()
+				if(ore) ore.RetrieveOre(src.loc)
+				UpdateSurroundingTiles(src.loc)
+				src.loc = null

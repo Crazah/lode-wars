@@ -16,7 +16,7 @@ obj/outdoors/rocks
 			SetBedrock()
 				color = list(0.3,0.3,0.3, 0.59,0.59,0.59, 0.11,0.11,0.11, 0,0,0)
 				initialColor = color
-				health = 15
+				durability = 3
 
 			UpdateState(exclude)
 				icon_state = GetTileState(exclude)

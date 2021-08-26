@@ -1,3 +1,5 @@
+#define MOVE_DELAY (min(6 - (speed/3),2))
+
 mob/alien/
 	var/
 
@@ -25,3 +27,11 @@ mob/alien/
 			for(var/obj/items/item in contents)
 				weight += item.weight
 			return weight
+
+
+	Move(atom/newLoc)
+		if(isMining) return 0
+		if(nextMove > world.time) return 0
+		glide_size = TILE_WIDTH / max(MOVE_DELAY,TICK_LAG) * TICK_LAG
+		. = ..()
+		if(.) nextMove = world.time + MOVE_DELAY
