@@ -1,4 +1,4 @@
-#define MOVE_DELAY (min(6 - (speed/3),2))
+#define MOVE_DELAY (max(6 - (speed/3),1.8))
 
 mob/alien/
 	var/

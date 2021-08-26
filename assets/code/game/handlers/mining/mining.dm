@@ -35,6 +35,7 @@ obj/outdoors/rocks
 			Mine(mob/alien/player, damage)
 				set waitfor = 0
 				if(player.isMining) return
+				sleep(1)
 				player.isMining = true
 				player.icon_state = "action"
 				MiningAnimation()

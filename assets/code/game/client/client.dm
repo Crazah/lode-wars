@@ -4,6 +4,6 @@ client
 		ui/chat/chatBox = new()
 
 	New()
-		var/mobType = pick(typesof(/mob/alien/) - /mob/alien/)
+		var/mobType = /mob/alien/bolo//pick((typesof(/mob/alien/) - /mob/alien/))
 		mob = new mobType()
 		..()

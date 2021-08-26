@@ -56,6 +56,8 @@ mob/alien/
 
 	bolo
 		icon = 'assets/art/mobs/bolo.dmi'
+		bound_width = 64
+		bound_height = 64
 		strength = 18
 		attack = 16
 		speed = 8

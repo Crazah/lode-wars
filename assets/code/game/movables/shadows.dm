@@ -16,7 +16,7 @@ atom/movable/
 		GenerateShadow()
 			if(!hasShadow) return
 			var/icon/I = new/icon(icon)
-			var/matrix/originalMatrix = matrix(-1,0,0,0,-1,0)
+			var/matrix/originalMatrix = matrix(1,0,0,0,-1,0)
 			shadow = new()
 			shadow.appearance = src.appearance
 			shadow.alpha = 50
@@ -32,12 +32,11 @@ atom/movable/
 			if(!shadowOffsetY) shadowOffsetY = initial(shadowOffsetY) + initial(pixel_y)
 			if(!shadowOffsetX) shadowOffsetX = initial(shadowOffsetX) + initial(pixel_y)
 
-			var/matrix/newMatrix = turn(originalMatrix, 180)
 			var/newHeightOffset = -I.Height()/1.2
 			var/newWidthOffset = 0
 
 			shadow.pixel_x = newWidthOffset + shadowOffsetX
 			shadow.pixel_y = newHeightOffset + shadowOffsetY
-			shadow.transform = newMatrix
+			shadow.transform = originalMatrix
 
 			vis_contents += shadow
