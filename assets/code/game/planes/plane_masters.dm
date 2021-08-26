@@ -11,6 +11,7 @@ obj/screen_objects/
 		lighting_backdrop
 			plane = LIGHTING_PLANE
 			icon_state = "white"
+			mouse_opacity = false
 			lit
 				layer = BACKGROUND_LAYER+21
 				color = "black"
@@ -20,13 +21,13 @@ obj/screen_objects/
 	plane_master
 		screen_loc = "CENTER"
 		appearance_flags = PLANE_MASTER | NO_CLIENT_COLOR | PIXEL_SCALE
-		mouse_opacity = false
 		blend_mode = BLEND_OVERLAY
 		floor_plane
 			plane = FLOOR_PLANE
 
 		wall_plane
 			plane = WALL_PLANE
+			mouse_opacity = 0
 			filters=list(filter(type="drop_shadow",x = 0, y = -6, size = 6, color = "#04080FAA"))
 
 		movable_plane
@@ -34,8 +35,9 @@ obj/screen_objects/
 
 		lighting_plane
 			plane = LIGHTING_PLANE
-			color = list(null, null, null, "#0000", "#000f")
+			color = list(null, null, null, "#0000", "#112f")
 			blend_mode = BLEND_MULTIPLY
+			mouse_opacity = false
 			Backdrop(client/C)
 
 				overlays += new/obj/screen_objects/backdrop/lighting_backdrop/lit

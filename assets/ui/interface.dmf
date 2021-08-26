@@ -71,10 +71,9 @@ window "default"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Lode Wars"
-		statusbar = false
 		macro = "macro"
-		outer-size = 1040x807
-		inner-size = 1024x768
+		outer-size = 1040x826
+		inner-size = 1024x787
 	elem "map1"
 		type = MAP
 		pos = 0,0

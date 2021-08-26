@@ -3,6 +3,7 @@ ui
 	icon = 'assets/art/ui/hud2.dmi'
 	plane = UI_BACKDROP_PLANE
 	layer = EFFECTS_LAYER
+	mouse_opacity = false
 	New()
 		..()
 		SetScreenPosition()

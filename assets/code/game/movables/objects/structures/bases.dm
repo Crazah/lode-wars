@@ -26,5 +26,13 @@ obj/outdoors/structures/bases
 			new/obj/lights/white_light(src.loc)
 			animate(filters[1],offset = 2,time = rand(8,11),loop=-1)
 			animate(offset=1,time=rand(8,11))
+
 		invisible_lamp
 			invisibility = 1
+
+		mining_lamp
+
+			MapInit()
+				new/obj/lights/mining_light(src.loc)
+				animate(filters[1],offset = 2,time = rand(8,11),loop=-1)
+				animate(offset=1,time=rand(8,11))

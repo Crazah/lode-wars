@@ -9,11 +9,11 @@ ore
 		GetTotalValue()
 			return round(value * amount)
 
-		RetrieveOre(mob/player)
+		RetrieveOre(turf/tile)
 			var/obj/items/ores/item = new itemPath()
 			item.value = GetTotalValue()
 			item.icon_state = GetIconState()
-			item.AddToPlayerOrDrop(player)
+			item.loc = tile
 
 		GetIconState()
 			switch(amount)

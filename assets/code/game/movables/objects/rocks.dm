@@ -8,9 +8,16 @@ obj/outdoors/rocks
 
 		MapInit()
 			..()
-			icon_state = GetTileState()
+			UpdateState()
 
-		proc/SetBedrock()
-			color = list(0.3,0.3,0.3, 0.59,0.59,0.59, 0.11,0.11,0.11, 0,0,0)
-			initialColor = color
-			health = 15
+
+
+		proc/
+			SetBedrock()
+				color = list(0.3,0.3,0.3, 0.59,0.59,0.59, 0.11,0.11,0.11, 0,0,0)
+				initialColor = color
+				health = 15
+
+			UpdateState(exclude)
+				icon_state = GetTileState(exclude)
+				if(icon_state != "15") ShowOre()

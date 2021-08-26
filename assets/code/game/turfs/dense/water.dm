@@ -13,16 +13,17 @@ turf/outdoors/dense/
 
 		// this is a very rough implementation of swimming, mostly just PoC
 		Enter(atom/movable/mover)
-			if(ismob(mover))
-				var/mob/mob = mover
-				if(isDeepWater) mob.Submerge()
+			if(istype(mover,/mob/alien/))
+				var/mob/alien/mob = mover
+				if(mob.CanSwim()) mob.Submerge()
+				else return 0
 			return ..()
 
 		Exit(atom/movable/mover, atom/newLoc)
-			if(ismob(mover))
+			if(istype(mover,/mob/alien/))
 				var/turf/outdoors/dense/water/newSurfaceLoc = newLoc
-				if(!istype(newSurfaceLoc) || !newSurfaceLoc.isDeepWater)
-					var/mob/mob = mover
+				if(!istype(newSurfaceLoc))
+					var/mob/alien/mob = mover
 					mob.Surface()
 			return ..()
 
@@ -35,7 +36,3 @@ turf/outdoors/dense/
 
 			SetDeepWater()
 				isDeepWater = true
-
-turf/Click()
-	..()
-	usr.loc = src
